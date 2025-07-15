@@ -1,0 +1,204 @@
+/* Reset and Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #000; /* fondo negro */
+    color: #fff;
+    overflow-x: hidden;
+    font-size: 1.1rem;
+  }
+  
+  /* Navigation */
+  header {
+    background-color: #000;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+  }
+  
+  nav h1 {
+    font-size: 1.5rem;
+    color: #ed1c24; /* rojo bandera PR */
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 1.5em;
+    list-style: none;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #0077cc; /* azul bandera PR */
+  }
+  
+  /* Mobile menu button */
+  .menu-toggle {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 6em 2em 3em;
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    background-attachment: fixed;
+  }
+  
+  .hero .cover {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1.5em;
+  }
+  
+  .play-button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.75em 2em;
+    background-color: #0077cc; /* azul bandera PR */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background-color: #ed1c24; /* rojo bandera PR */
+  }
+  
+  /* Sections */
+  section {
+    padding: 5em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    margin-bottom: 1em;
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(to right, #ed1c24, #ffffff, #0077cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .features {
+    display: grid;
+    gap: 2em;
+  }
+  
+  .feature {
+    text-align: center;
+  }
+  
+  .feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+  }
+  
+  /* Team */
+  .team ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .team li {
+    margin-bottom: 1em;
+    font-size: 1.1rem;
+   
+    text-align: center;
+  padding: 0 1em;
+  }
+  
+  /* Resources */
+  .resources a {
+    display: inline-block;
+    margin-top: 0.5em;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Fade-in effect */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+    transition: all 0.8s cubic-bezier(0.2, 0.6, 0.3, 1);
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  /* Click effect */
+  .clicked {
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      background: #000;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      padding: 1em;
+      display: none;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    .features {
+      display: block;
+    }
+  }
